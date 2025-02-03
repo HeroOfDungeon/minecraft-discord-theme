@@ -1,6 +1,6 @@
 # Minecraft Font to Discord Theme
 A small side project, the theme simply changes the default Discord font to the Minecraft font.
-[Thanks to Zane DragonBorn for the idea](https://github.com/ZaneDragonBorn/Minecraftia-BD-Theme)
+<br>[Thanks to Zane DragonBorn for the idea](https://github.com/ZaneDragonBorn/Minecraftia-BD-Theme)
 ## What it looks like
 ![image](https://github.com/user-attachments/assets/bc85e396-e763-46e8-9ab8-abb144d47e7d)
 ## Install
