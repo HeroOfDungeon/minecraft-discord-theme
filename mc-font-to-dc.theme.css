@@ -1,0 +1,21 @@
+/**
+ * @name Minecraft Font Discord Theme
+ * @author HeroOfDungeon
+ * @version 1.0
+ * @description Changes Discord Font with the Minecraft one!
+ * @source https://github.com/HeroOfDungeon/mc-font-to-dc
+ * @website https://github.com/HeroOfDungeon/mc-font-to-dc
+ * @invite
+ */
+
+/* REMEMBER TO INSTALL THE MINECRAFT FONT FROM https://www.fontspace.com/minecraft-font-f28180 */
+
+:root {
+	/* Font Changes */
+	--font-primary: Minecraft;
+	--font-code: Minecraft;
+	--font-clan-signature: Minecraft;
+	--font-display: Minecraft;
+	--font-display-marketing: Minecraft;
+	--font-headline: Minecraft;
+}
