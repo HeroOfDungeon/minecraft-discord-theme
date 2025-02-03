@@ -3,6 +3,7 @@ A small side project, the theme simply changes the default Discord font to the M
 <br>[Thanks to Zane DragonBorn for the idea](https://github.com/ZaneDragonBorn/Minecraftia-BD-Theme)
 ## What it looks like
 ![image](https://github.com/user-attachments/assets/bc85e396-e763-46e8-9ab8-abb144d47e7d)
+![image](https://github.com/user-attachments/assets/79101d90-a609-4fbb-8dc4-d739a25f047e)
 ## Install
 1. Download the `mc-font-to-dc.theme.css` file from here or from BetterDiscord (In the future)
 2. Download the font from [fontspace.com](https://www.fontspace.com/minecraft-font-f28180) and install it by double-clicking
