@@ -8,7 +8,34 @@
  * @invite
  */
 
-/* REMEMBER TO INSTALL THE MINECRAFT FONT FROM https://www.fontspace.com/minecraft-font-f28180 */
+ /* Load the fonts */
+ @font-face {
+    font-family: "Minecraft";
+    src: url('https://raw.githubusercontent.com/HeroOfDungeon/mc-font-to-dc/main/MinecraftRegular.otf') format('opentype');
+    font-style: normal;
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: "Minecraft";
+    src: url('https://raw.githubusercontent.com/HeroOfDungeon/mc-font-to-dc/main/MinecraftItalic.otf') format('opentype');
+    font-style: italic;
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: "Minecraft";
+    src: url('https://raw.githubusercontent.com/HeroOfDungeon/mc-font-to-dc/main/MinecraftBold.otf') format('opentype');
+    font-style: normal;
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: "Minecraft";
+    src: url('https://raw.githubusercontent.com/HeroOfDungeon/mc-font-to-dc/main/MinecraftBoldItalic.otf') format('opentype');
+    font-style: italic;
+    font-weight: bold;
+}
 
 :root {
 	/* Font Changes */
