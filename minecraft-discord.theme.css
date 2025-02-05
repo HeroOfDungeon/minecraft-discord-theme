@@ -1,0 +1,119 @@
+/**
+ * @name Minecraft Font Discord Theme
+ * @author HeroOfDungeon
+ * @version 1.0
+ * @description Changes Discord Font with the Minecraft one!
+ * @source https://github.com/HeroOfDungeon/mc-font-to-dc
+ * @website https://github.com/HeroOfDungeon/mc-font-to-dc
+ * @invite
+ */
+
+/* Settings */
+:root {
+    --block_nitro: none; /* "none" = block ads or "block" to not block ads lol */
+    --darker_shadow: 20%; /* How much black should be mixed with the shadow of buttons */
+}
+
+ /* Load the fonts */
+ @font-face {
+    font-family: "Minecraft";
+    src: url('https://raw.githubusercontent.com/HeroOfDungeon/mc-font-to-dc/main/MinecraftRegular.otf') format('opentype');
+    font-style: normal;
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: "Minecraft";
+    src: url('https://raw.githubusercontent.com/HeroOfDungeon/mc-font-to-dc/main/MinecraftItalic.otf') format('opentype');
+    font-style: italic;
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: "Minecraft";
+    src: url('https://raw.githubusercontent.com/HeroOfDungeon/mc-font-to-dc/main/MinecraftBold.otf') format('opentype');
+    font-style: normal;
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: "Minecraft";
+    src: url('https://raw.githubusercontent.com/HeroOfDungeon/mc-font-to-dc/main/MinecraftBoldItalic.otf') format('opentype');
+    font-style: italic;
+    font-weight: bold;
+}
+
+:root {
+	/* Variable Changes */
+	--font-primary: Minecraft, Consolas;
+	--font-code: Minecraft, Consolas;
+	--font-clan-signature: Minecraft, Consolas;
+	--font-display: Minecraft, Consolas;
+	--font-display-marketing: Minecraft, Consolas;
+	--font-headline: Minecraft, Consolas;
+    --radius-xs: 0px;
+}
+
+html, .baseShapeRound__2b1f5,
+.addFriend__133bf.addFriend__133bf.addFriend__133bf,
+.lookFilled__201d5, .topPill_b3f026 .item_b3f026,
+.itemCard__7e549, .section__00943:only-child,
+.container_a45028, .actionAccept_f8fa06,
+.actionDeny_f8fa06, button.button__67645,
+.container_e45859, .card_ac86f6,
+.whatsNewSectionBackground_c880e8, .card_f8e6bf,
+.cardImage_f8e6bf, .button__201d5, .tier2ColumnOuter_e4ef5c,
+.innerWrapperV1__70f7f, .mostPopularPill_e4ef5c,
+.actionButton_f8fa06,
+.side_b3f026 .item_b3f026, .input__0f084, .select__3f413,
+.input__87bf1, .box_f8c98c, .row__0624f, .container_a45028,
+.card__73069, .connectContainer_c7f964, .inner__02fc8,
+.accountAddInner_c7f964, .connectionHeader_c7f964,
+.connection_c7f964, .metadataContainer_c7f964, .integrationWrapper_c7f964,
+.section__00943:first-child, .wrapper__960df, .vc-addon-card, .item__001a7,
+.cameraWrapper_d41d5f, .cameraWrapper_d41d5f, .section__00943:last-child,
+.closeButton_c2b141, .navItem__551b0, .inner_a45028, .card__84e3e,
+.category_fe77d6, .menu_c1e9c4, .iconButton__8a7fc, .oneByOneGridSingle_f4758a,
+.scrollableContainer__74017, .link__2ea32, .channelTextArea__74017,
+.popoutContainer__0f481, .outer_ab8609 {
+    border-radius: 0px; /* Global border radius */ /* I don't change variables cuz they are not used everywhere */
+}
+
+/* Adblocker */
+.conta.button__24af7 .iner__8279f, .item_b3f026:nth-child(22),
+.item_b3f026:nth-child(23), .item_b3f026:nth-child(26),
+.container_c50183, .item_b3f026:nth-child(46),
+.customizationSection_ace4f5, .customizationSection_ace4f5,
+.upsellContainer__0b69f, [aria-label="Send a gift"],
+.backdrop__78332, #guild-header-popout-premium-subscribe,
+.separator_c1e9c4:nth-child(2) {
+    display: var(--block_nitro);
+}
+
+.numberBadge__2b1f5 {
+    box-shadow: 2px 2px color-mix(in srgb, var(--status-danger), black var(--darker_shadow));
+}
+
+.addFriend__133bf {
+    box-shadow: 2px 2px color-mix(in srgb, var(--status-positive-background), black var(--darker_shadow));
+}
+
+.colorBrand__201d5 {
+    box-shadow: 2px 2px color-mix(in srgb, var(--button-filled-brand-background), black var(--darker_shadow));
+}
+
+.colorBrand__201d5:hover {
+    box-shadow: 2px 2px color-mix(in srgb, var(--button-filled-brand-background-hover), black var(--darker_shadow));
+}
+
+.colorPrimary__201d5 {
+    box-shadow: 2px 2px color-mix(in srgb, var(--button-secondary-background), black var(--darker_shadow));
+}
+
+.attachButton__0923f, .lookBlank__201d5, .lookLink__201d5 {
+    box-shadow: none; /* Remove box shadow if not needed */
+}
+
+.itemCard__7e549 {
+    box-shadow:4px 4px color-mix(in srgb, var(--activity-card-background), black 40%);
+}
