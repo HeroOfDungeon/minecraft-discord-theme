@@ -1,14 +1,14 @@
 /**
- * @name Minecraft Font Discord Theme
+ * @name Minecraft Discord Theme
  * @author HeroOfDungeon
  * @version 1.0
- * @description Changes Discord Font with the Minecraft one!
+ * @description Make your Discord more like Minecraft
  * @source https://github.com/HeroOfDungeon/mc-font-to-dc
  * @website https://github.com/HeroOfDungeon/mc-font-to-dc
  * @invite
  */
 
-/* Settings */
+/* Settings for the user */
 :root {
     --block_nitro: none; /* "none" = block ads or "block" to not block ads lol */
     --darker_shadow: 20%; /* How much black should be mixed with the shadow of buttons */
@@ -45,26 +45,30 @@
 
 :root {
 	/* Variable Changes */
+    /* Fonts */
 	--font-primary: Minecraft, Consolas;
 	--font-code: Minecraft, Consolas;
 	--font-clan-signature: Minecraft, Consolas;
 	--font-display: Minecraft, Consolas;
 	--font-display-marketing: Minecraft, Consolas;
 	--font-headline: Minecraft, Consolas;
+    /* Some border-radius variables */
     --radius-xs: 0px;
+    --radius-md: 0px;
 }
 
-html, .baseShapeRound__2b1f5,
+/* Remove every edges i found cuz minecraft don't have round things */
+html, code, .baseShapeRound__2b1f5,
 .addFriend__133bf.addFriend__133bf.addFriend__133bf,
 .lookFilled__201d5, .topPill_b3f026 .item_b3f026,
 .itemCard__7e549, .section__00943:only-child,
 .container_a45028, .actionAccept_f8fa06,
 .actionDeny_f8fa06, button.button__67645,
-.container_e45859, .card_ac86f6,
+.container_e45859, .card_ac86f6, .layout__91a9d,
 .whatsNewSectionBackground_c880e8, .card_f8e6bf,
 .cardImage_f8e6bf, .button__201d5, .tier2ColumnOuter_e4ef5c,
 .innerWrapperV1__70f7f, .mostPopularPill_e4ef5c,
-.actionButton_f8fa06,
+.actionButton_f8fa06, .container__0f2e8,
 .side_b3f026 .item_b3f026, .input__0f084, .select__3f413,
 .input__87bf1, .box_f8c98c, .row__0624f, .container_a45028,
 .card__73069, .connectContainer_c7f964, .inner__02fc8,
@@ -75,21 +79,27 @@ html, .baseShapeRound__2b1f5,
 .closeButton_c2b141, .navItem__551b0, .inner_a45028, .card__84e3e,
 .category_fe77d6, .menu_c1e9c4, .iconButton__8a7fc, .oneByOneGridSingle_f4758a,
 .scrollableContainer__74017, .link__2ea32, .channelTextArea__74017,
-.popoutContainer__0f481, .outer_ab8609 {
-    border-radius: 0px; /* Global border radius */ /* I don't change variables cuz they are not used everywhere */
+.popoutContainer__0f481, .outer_ab8609, .searchBar__97492, .hljs,
+.imageWrapper_af017a, .mosaicItemMediaMosaic__6c706,
+.visualMediaItemContainer_f4758a, .embed__623de, .item__58105,
+.markup__75297 code.inline, .card__88264, .root__49fc1 {
+    border-radius: 0px; /* Global border radius */
 }
 
-/* Adblocker */
+/* Block Nitro-Related things if --block_nitro is set to "none" */
 .conta.button__24af7 .iner__8279f, .item_b3f026:nth-child(22),
 .item_b3f026:nth-child(23), .item_b3f026:nth-child(26),
 .container_c50183, .item_b3f026:nth-child(46),
-.customizationSection_ace4f5, .customizationSection_ace4f5,
 .upsellContainer__0b69f, [aria-label="Send a gift"],
 .backdrop__78332, #guild-header-popout-premium-subscribe,
-.separator_c1e9c4:nth-child(2) {
+.separator_c1e9c4:nth-child(2), .premiumFeatureBorder__65c15,
+.upsellOverlayContainer__0f7dc, .container__8279f,
+.premiumIcon__5d473, /* Booster Icon */
+a[href="https://discord.com/settings/premium"] {
     display: var(--block_nitro);
 }
 
+/* Some cool button/box shadows */
 .numberBadge__2b1f5 {
     box-shadow: 2px 2px color-mix(in srgb, var(--status-danger), black var(--darker_shadow));
 }
@@ -110,10 +120,11 @@ html, .baseShapeRound__2b1f5,
     box-shadow: 2px 2px color-mix(in srgb, var(--button-secondary-background), black var(--darker_shadow));
 }
 
-.attachButton__0923f, .lookBlank__201d5, .lookLink__201d5 {
-    box-shadow: none; /* Remove box shadow if not needed */
-}
-
 .itemCard__7e549 {
     box-shadow:4px 4px color-mix(in srgb, var(--activity-card-background), black 40%);
+}
+
+/* Remove box shadow of some buttons who don't need a shadow */
+.attachButton__0923f, .lookBlank__201d5, .lookLink__201d5 {
+    box-shadow: none;
 }
