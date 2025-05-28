@@ -1,21 +1,40 @@
 /**
  * @name Minecraft Discord Theme
  * @author HeroOfDungeon
- * @version 1.2
+ * @version 1.4 (Beta)
  * @description Make your Discord more like Minecraft
  * @source https://github.com/HeroOfDungeon/mc-font-to-dc
  * @website https://github.com/HeroOfDungeon/mc-font-to-dc
  * @invite
- */
+*/
+
+@import url("https://ukriu.github.io/cssCord/Other/noDistractions.css");
+@import url("https://raw.githubusercontent.com/HeroOfDungeon/snippets/refs/heads/main/More%20Animations.css");
 
 /* Settings for the user */
 :root {
     --block_nitro: none; /* "none" = block ads or "block" to not block ads lol */
     --darker_shadow: 20%; /* How much black should be mixed with the shadow of buttons */
+    --font: "Minecraft", "Consolas";
+    --animation-speed: 0.1s;
 }
 
- /* Load the fonts */
- @font-face {
+/*
+Some nice fonts:
+Old English Text MT
+Blackadder ITC
+Bradley Hand ITC
+Copperplate Gothic
+Edwardian Script ITC
+Parchment
+Webdings
+Wingdings
+Wingdings 2
+Wingdings 3
+*/
+
+/* Load the fonts */
+@font-face {
     font-family: "Minecraft";
     src: url('https://raw.githubusercontent.com/HeroOfDungeon/mc-font-to-dc/main/MinecraftRegular.otf') format('opentype');
     font-style: normal;
@@ -45,45 +64,58 @@
 
 :root {
 	/* Variable Changes */
-    /* Fonts */
-	--font-primary: Minecraft, Consolas;
-	--font-code: Minecraft, Consolas;
-	--font-clan-signature: Minecraft, Consolas;
-	--font-display: Minecraft, Consolas;
-	--font-display-marketing: Minecraft, Consolas;
-	--font-headline: Minecraft, Consolas;
-    /* Some border-radius variables */
-    --radius-xs: 0px;
-    --radius-md: 0px;
+	--font-primary: var(--font);
+	--font-code: var(--font);
+	--font-clan-signature: var(--font);
+	--font-display: var(--font);
+	--font-display-marketing: var(--font);
+	--font-headline: var(--font);
 }
 
-/* Remove every edges i found cuz minecraft don't have round things */
-html, code, .baseShapeRound__2b1f5,
-.addFriend__133bf.addFriend__133bf.addFriend__133bf,
-.lookFilled__201d5, .topPill_b3f026 .item_b3f026,
-.itemCard__7e549, .section__00943:only-child,
-.container_a45028, .actionAccept_f8fa06,
-.actionDeny_f8fa06, button.button__67645,
-.container_e45859, .card_ac86f6, .layout__91a9d,
-.whatsNewSectionBackground_c880e8, .card_f8e6bf,
-.cardImage_f8e6bf, .button__201d5, .tier2ColumnOuter_e4ef5c,
-.innerWrapperV1__70f7f, .mostPopularPill_e4ef5c,
-.actionButton_f8fa06, .container__0f2e8,
-.side_b3f026 .item_b3f026, .input__0f084, .select__3f413,
-.input__87bf1, .box_f8c98c, .row__0624f, .container_a45028,
-.card__73069, .connectContainer_c7f964, .inner__02fc8,
-.accountAddInner_c7f964, .connectionHeader_c7f964,
-.connection_c7f964, .metadataContainer_c7f964, .integrationWrapper_c7f964,
-.section__00943:first-child, .wrapper__960df, .vc-addon-card, .item__001a7,
-.cameraWrapper_d41d5f, .cameraWrapper_d41d5f, .section__00943:last-child,
-.closeButton_c2b141, .navItem__551b0, .inner_a45028, .card__84e3e,
-.category_fe77d6, .menu_c1e9c4, .iconButton__8a7fc, .oneByOneGridSingle_f4758a,
-.scrollableContainer__74017, .link__2ea32, .channelTextArea__74017,
-.popoutContainer__0f481, .outer_ab8609, .searchBar__97492, .hljs,
-.imageWrapper_af017a, .mosaicItemMediaMosaic__6c706,
-.visualMediaItemContainer_f4758a, .embed__623de, .item__58105,
-.markup__75297 code.inline, .card__88264, .root__49fc1 {
-    border-radius: 0px; /* Global border radius */
+/* Remove all edges cuz minecraft don't have round things */
+*,
+*::before,
+*::after,
+.folderPreview__48112 > div {
+    border-radius: 0 !important;
+}
+
+.svg_cc5dd2 > mask {
+    display: none !important;
+}
+
+section.presets__67a11 > div:nth-child(9) {
+    display: none;
+}
+
+.svg_cc5dd2 > foreignObject, .mask__44b0c > foreignObject {
+    mask: none !important;
+}
+
+.avatar_c19a55, .avatarStack__44b0c > img,
+.avatar__07f91, .vc-mentionAvatars-icon,
+.iconActiveMedium_f34534, .iconInactive_f34534,
+.replyAvatar_c19a55, .icon_bd6d20, .largeImage__00943,
+.headerIcon__00943, .contentImage__42bf5,
+.avatar__183c2 {
+    transition: border-radius 0.1s ease-out !important;
+    border-radius: 50% !important;
+}
+
+.avatar_c19a55:hover,
+.avatar__0a06e:hover > svg > foreignObject > .avatarStack__44b0c > img,
+.wrapper__44b0c:hover > svg > foreignObject > .avatarStack__44b0c > img,
+.avatar__07f91:hover, .vc-mentionAvatars-icon:hover,
+.iconActiveMedium_f34534:hover, .iconInactive_f34534:hover,
+.replyAvatar_c19a55:hover, .icon_bd6d20:hover,
+.largeImage__00943:hover, .headerIcon__00943:hover,
+.contentImage__42bf5:hover, .avatar__183c2:hover {
+    border-radius: 0 !important;
+}
+
+/* Sticky DM Button */
+.topSection_ef3116 {
+    position: sticky;
 }
 
 /* Block Nitro-Related things if --block_nitro is set to "none" */
@@ -94,13 +126,34 @@ html, code, .baseShapeRound__2b1f5,
 .backdrop__78332, #guild-header-popout-premium-subscribe,
 .separator_c1e9c4:nth-child(2), .premiumFeatureBorder__65c15,
 .upsellOverlayContainer__0f7dc, .container__8279f,
-.premiumIcon__5d473, /* Booster Icon */
+/*.premiumIcon__5d473, /* Booster Icon */
 a[href="https://discord.com/settings/premium"] {
     display: var(--block_nitro);
 }
 
+.container__8061a {
+    padding: 0 0px;
+}
+
+.contentRegionScroller__23e6b, .sidebarRegionScroller__23e6b {
+    background-color: 0 0 0 0;
+}
+
+.wrapper_cc5dd2 > svg > mask > use[href*="lower"] {
+    display: none;
+}
+
+[class^="listItem_"] [data-dnd-name*=""] [class^="wrapper_"] {
+    > [class^="lowerBadge_"] {
+        display: none!important;
+    }
+    > svg > mask > use[href*="lower"] {
+        display: none;
+    }
+}
+
 /* Some cool button/box shadows */
-.numberBadge__2b1f5 {
+.numberBadge__2b1f5 { /* Notification Counter */
     box-shadow: 2px 2px color-mix(in srgb, var(--status-danger), black var(--darker_shadow));
 }
 
@@ -121,10 +174,146 @@ a[href="https://discord.com/settings/premium"] {
 }
 
 .itemCard__7e549 {
-    box-shadow:4px 4px color-mix(in srgb, var(--activity-card-background), black 40%);
+    box-shadow:4px 4px color-mix(in srgb, var(--activity-card-background), black var(--darker_shadow));
 }
 
+.reactionBtn__23977.forceShow__23977, .reaction__23977 { /* Reactions */
+    box-shadow:4px 4px color-mix(in srgb, var(--background-secondary), black var(--darker_shadow));
+}
+
+.reaction__23977.reactionMe__23977 {
+    box-shadow:4px 4px color-mix(in srgb, var(--brand-15a), black var(--darker_shadow));
+}
+
+.button__7d7f7 {
+    box-shadow:4px 4px color-mix(in srgb, var(--bg-mod-faint), black var(--darker_shadow));
+}
+
+div.numberBadge__2b1f5:nth-child(2), .numberBadge__2ea32 {
+    box-shadow: 2px 2px color-mix(in srgb, var(--background-accent), black var(--darker_shadow));
+}
+
+/*.custom-profile-theme {
+    box-shadow: 2px 2px color-mix(in srgb, (color-mix(in srgb,var(--profile-gradient-button-color) 80%,transparent)), black var(--darker_shadow));
+}*/
+
 /* Remove box shadow of some buttons who don't need a shadow */
-.attachButton__0923f, .lookBlank__201d5, .lookLink__201d5 {
+.attachButton__0923f, .lookBlank__201d5, .lookBlank__201d5:hover, .lookLink__201d5 {
     box-shadow: none;
+}
+
+/* Custom channel icons */
+.link__2ea32[aria-label*="(text channel)"] > div > .iconContainer__2ea32[aria-label="Text (Limited) icon"] {
+    background: url("https://github.com/HeroOfDungeon/minecraft-discord-theme/blob/main/icons/channel_limited.png?raw=true") center/contain no-repeat;
+}
+
+.link__2ea32[aria-label*="(text channel)"] > div > .iconContainer__2ea32[aria-label="Text icon"] {
+    background: url("https://github.com/HeroOfDungeon/minecraft-discord-theme/blob/main/icons/channel.png?raw=true") center/contain no-repeat;
+}
+
+.link__2ea32[aria-label*="(text channel)"] > div > .iconContainer__2ea32[aria-label="Rules icon"] {
+    background: url("https://github.com/HeroOfDungeon/minecraft-discord-theme/blob/main/icons/rules.png?raw=true") center/contain no-repeat;
+}
+
+.link__2ea32[aria-label*="(text channel)"] > div > .iconContainer__2ea32[aria-label="Forum (Limited) icon"] {
+    background: url("https://github.com/HeroOfDungeon/minecraft-discord-theme/blob/main/icons/forum_limited.png?raw=true") center/contain no-repeat;
+}
+
+.link__2ea32[aria-label*="(text channel)"] > div > .iconContainer__2ea32[aria-label="Forum icon"] {
+    background: url("https://github.com/HeroOfDungeon/minecraft-discord-theme/blob/main/icons/forum.png?raw=true") center/contain no-repeat;
+}
+
+.link__2ea32 > div > .iconContainer__2ea32[aria-label*="(Locked)"] {
+    background: url("https://github.com/HeroOfDungeon/minecraft-discord-theme/blob/main/icons/locked.png?raw=true") center/contain no-repeat;
+}
+
+.link__2ea32[aria-label*="(text channel)"] > div > div > svg path,
+.link__2ea32 > div > div[aria-label*="(Locked)"] > svg path {
+    display: none;
+}
+
+/* Snippets i stole and like */
+
+/* Better message timespamps */
+span[class*="timestampInline_"] time::before {
+    content: attr(aria-label);
+    font-size: 12px;
+}
+  
+span[class*="timestampInline_"] {
+    font-size: 0px !important;
+}
+
+.visual-refresh {
+    --custom-channel-textarea-text-area-height: 56px;
+    .form_f75fb0 {
+        margin: 0 8px 8px 8px;
+        padding: 0;
+        --chatbar-border-color: var(--border-faint);
+    }
+    .channelTextArea_f75fb0 {
+        margin: 0;
+        border-color: var(--chatbar-border-color);
+        transition: none;
+    }
+    .base_b88801 {
+        top: -24px;
+        left: 0;
+        right: 0;
+        background-color: var(--chat-background-default);
+        padding: 0 8px;
+        border-radius: var(--radius-sm) var(--radius-sm) 0 0;
+        border: 1px solid var(--chatbar-border-color);
+        border-bottom: none;
+        transition: none;
+        box-sizing: border-box;
+    }
+    .stackedBars__74017,
+    .threadSuggestionBar__841c8 {
+        border-color: var(--chatbar-border-color) !important;
+    }
+    .form_f75fb0:has(.base_b88801) {
+        .channelTextArea_f75fb0 {
+            border-radius: 0 0 var(--radius-sm) var(--radius-sm);
+        }
+    }
+    .form_f75fb0:has(.channelTextArea__74017:focus-within) {
+        --chatbar-border-color: var(--border-subtle);
+    }
+    .scrollerSpacer__36d07 {
+        height: calc(24px + 8px);
+    }
+    .scroller__36d07::-webkit-scrollbar-track {
+        margin-bottom: calc(20px + 8px);
+    }
+    .bottomBar__0f481 {
+        margin-bottom: 24px;
+    }
+    .wrapper__44df5 {
+        margin: 0;
+        border-radius: var(--radius-sm);
+    }
+}
+/*
+[id^=message-accessories] + [class^=buttonContainer] > [class^=buttons] {
+    top: -27px !important;
+}*/
+
+#message-add-reaction, .wrapper_f563df, #message > div > div:nth-child(3) {
+    display: none;
+}
+
+.visual-refresh div[class^="sidebar_"] section[class^="panels_"] {
+    width: calc(var(--custom-guild-sidebar-width) - var(--custom-guild-list-width) + 1px);
+    left: var(--custom-guild-list-width);
+    bottom: 0px;
+    border: none;
+}
+
+.visual-refresh nav[class*=guilds_] {
+  margin-bottom: unset;
+}
+
+#popout_48 {
+    width: 400px !important;
 }
