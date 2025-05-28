@@ -8,17 +8,6 @@
  * @invite
 */
 
-@import url("https://ukriu.github.io/cssCord/Other/noDistractions.css");
-@import url("https://raw.githubusercontent.com/HeroOfDungeon/snippets/refs/heads/main/More%20Animations.css");
-
-/* Settings for the user */
-:root {
-    --block_nitro: none; /* "none" = block ads or "block" to not block ads lol */
-    --darker_shadow: 20%; /* How much black should be mixed with the shadow of buttons */
-    --font: "Minecraft", "Consolas";
-    --animation-speed: 0.1s;
-}
-
 /*
 Some nice fonts:
 Old English Text MT
