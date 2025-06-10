@@ -8,6 +8,17 @@
  * @invite
 */
 
+@import url("https://ukriu.github.io/cssCord/Other/noDistractions.css");
+@import url("https://raw.githubusercontent.com/HeroOfDungeon/snippets/refs/heads/main/More%20Animations.css");
+
+/* Settings for the user */
+:root {
+    --block_nitro: none; /* "none" = block ads or "block" to not block ads lol */
+    --darker_shadow: 20%; /* How much black should be mixed with the shadow of buttons */
+    --font: "Minecraft", "Consolas";
+    --animation-speed: 0.1s;
+}
+
 /*
 Some nice fonts:
 Old English Text MT
@@ -219,6 +230,42 @@ div.numberBadge__2b1f5:nth-child(2), .numberBadge__2ea32 {
 .link__2ea32[aria-label*="(text channel)"] > div > div > svg path,
 .link__2ea32 > div > div[aria-label*="(Locked)"] > svg path {
     display: none;
+}
+
+.vc-imgzoom-lens {
+    box-shadow: none;
+    filter: none;
+}
+
+.tutorialContainer__1f388 {
+    border: 1px red solid;
+    position: sticky;
+    top: 0px;
+}
+
+.children__1647d {
+    gap: 0;
+}
+
+.grow__201d5 {
+    flex: 1;
+    height: 32px;
+}
+
+.visual-refresh .nameAndDecorators__91a9d:hover .name__703b9 {
+    overflow: visible;
+}
+
+.memberInner__5d473:has(.name__703b9:hover) {
+    padding-right: 0;
+}
+
+.roleRow__5f97b:hover .roleName__5f97b, .role_dfa8b6:hover .overflow__82b15, .truncated_c9d15c:hover {
+    overflow: visible;
+}
+
+.visual-refresh .memberInner__5d473 {
+    padding-right: 0;
 }
 
 /* Snippets i stole and like */
